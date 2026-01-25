@@ -29,12 +29,12 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2          &kp F3           &kp F4        &kp F5             &kp F6        &kp F7         &kp F8            &kp F9     &kp F10               &kp F11                &kp F12
-&kp CAPS        &none           &none            &none         &none              &bt BT_NXT    &kp LESS_THAN  &kp GREATER_THAN  &kp UP     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&kp LEFT_SHIFT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SQT       &kp DOUBLE_QUOTES  &bt BT_CLR    &kp DOLLAR     &kp LEFT          &kp DOWN   &kp RIGHT             &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&kp LCTRL       &none           &none            &none         &none              &none         &kp PLUS       &kp MINUS         &kp ASTRK  &kp SLASH             &kp AMPERSAND          &kp EQUAL
-                                                 &kp LEFT_WIN  &kp SPACE          &none         &kp LALT       &kp DELETE
-                                                               &mkp MB1           &mkp MB2      &kp ENTER
+&kp F1          &kp F2          &kp F3           &kp F4           &kp F5             &kp F6           &kp F7         &kp F8            &kp F9     &kp F10               &kp F11                &kp F12
+&kp CAPS        &none           &kp PIPE         &kp EXCLAMATION  &kp PERCENT        &bt BT_NXT       &kp LESS_THAN  &kp GREATER_THAN  &kp UP     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp LEFT_SHIFT  &kp LEFT_BRACE  &kp RIGHT_BRACE  &kp SQT          &kp DOUBLE_QUOTES  &kp COLON        &kp DOLLAR     &kp LEFT          &kp DOWN   &kp RIGHT             &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&kp LCTRL       &none           &none            &none            &kp COMMA          &kp SEMICOLON    &kp PLUS       &kp MINUS         &kp ASTRK  &kp SLASH             &kp AMPERSAND          &kp EQUAL
+                                                 &kp LEFT_WIN     &kp SPACE          &none            &kp LALT       &kp DELETE
+                                                                  &mkp MB1           &mkp MB2         &kp ENTER
             >;
 
             trackball-bindings = <&tsl>;
