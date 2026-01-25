@@ -73,6 +73,34 @@
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp AMPERSAND>;
         };
+
+        new_behavior_L: new_behavior_L {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_L";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&kp EXCLAMATION>;
+        };
+
+        new_behavior_G: new_behavior_G {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_G";
+            #binding-cells = <0>;
+            bindings = <&kp G>, <&kp PIPE>;
+        };
+
+        new_behavior_E: new_behavior_E {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_E";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp DOUBLE_QUOTES>;
+        };
+
+        new_behavior_W: new_behavior_W {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_W";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp SQT>;
+        };
     };
 
     keymap {
@@ -80,12 +108,12 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4     &kp N5      &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R      &kp T       &new_behavior_Y  &new_behavior_U  &new_behavior_I  &new_behavior_O  &new_behavior_P  &new_behavior_pp
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F      &kp G       &new_behavior_H  &new_behavior_J  &new_behavior_K  &kp L            &kp SEMICOLON    &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V      &kp B       &kp N            &kp M            &kp COMMA        &kp PERIOD       &kp FSLH         &kp MINUS
-                                &kp LEFT_WIN  &kp SPACE  &mo 1       &kp LALT         &mo 2
-                                              &mkp MB1   &mkp MB2    &kp ENTER
+&kp ESC         &kp N1  &kp N2           &kp N3           &kp N4     &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &kp BACKSPACE
+&kp TAB         &kp Q   &new_behavior_W  &new_behavior_E  &kp R      &kp T              &new_behavior_Y  &new_behavior_U  &new_behavior_I  &new_behavior_O  &new_behavior_P  &new_behavior_pp
+&kp LEFT_SHIFT  &kp A   &kp S            &kp D            &kp F      &new_behavior_G    &new_behavior_H  &new_behavior_J  &new_behavior_K  &new_behavior_L  &kp SEMICOLON    &kp SQT
+&kp LCTRL       &kp Z   &kp X            &kp C            &kp V      &kp B              &kp N            &kp M            &kp COMMA        &kp PERIOD       &kp FSLH         &kp MINUS
+                                         &kp LEFT_WIN     &kp SPACE  &mo 1              &kp LALT         &mo 2
+                                                          &mkp MB1   &mkp MB2           &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
