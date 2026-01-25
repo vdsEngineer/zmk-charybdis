@@ -101,6 +101,41 @@
             #binding-cells = <0>;
             bindings = <&kp W>, <&kp SQT>;
         };
+
+        new_behavior_N: new_behavior_N {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_N";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&kp PLUS>;
+        };
+
+        new_behavior_M: new_behavior_M {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_M";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp MINUS>;
+        };
+
+        new_behavior_MM: new_behavior_MM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_MM";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp ASTERISK>;
+        };
+
+        new_behavior_MMM: new_behavior_MMM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_MMM";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp SLASH>;
+        };
+
+        new_behavior_MMMM: new_behavior_MMMM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_MMMM";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp EQUAL>;
+        };
     };
 
     keymap {
@@ -108,10 +143,10 @@
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2           &kp N3           &kp N4     &kp N5             &kp N6           &kp N7           &kp N8           &kp N9           &kp N0           &kp BACKSPACE
-&kp TAB         &kp Q   &new_behavior_W  &new_behavior_E  &kp R      &kp T              &new_behavior_Y  &new_behavior_U  &new_behavior_I  &new_behavior_O  &new_behavior_P  &new_behavior_pp
-&kp LEFT_SHIFT  &kp A   &kp S            &kp D            &kp F      &new_behavior_G    &new_behavior_H  &new_behavior_J  &new_behavior_K  &new_behavior_L  &kp SEMICOLON    &kp SQT
-&kp LCTRL       &kp Z   &kp X            &kp C            &kp V      &kp B              &kp N            &kp M            &kp COMMA        &kp PERIOD       &kp FSLH         &kp MINUS
+&kp ESC         &kp N1  &kp N2           &kp N3           &kp N4     &kp N5             &kp N6           &kp N7           &kp N8            &kp N9             &kp N0              &kp BACKSPACE
+&kp TAB         &kp Q   &new_behavior_W  &new_behavior_E  &kp R      &kp T              &new_behavior_Y  &new_behavior_U  &new_behavior_I   &new_behavior_O    &new_behavior_P     &new_behavior_pp
+&kp LEFT_SHIFT  &kp A   &kp S            &kp D            &kp F      &new_behavior_G    &new_behavior_H  &new_behavior_J  &new_behavior_K   &new_behavior_L    &kp SEMICOLON       &kp SQT
+&kp LCTRL       &kp Z   &kp X            &kp C            &kp V      &kp B              &new_behavior_N  &new_behavior_M  &new_behavior_MM  &new_behavior_MMM  &new_behavior_MMMM  &kp MINUS
                                          &kp LEFT_WIN     &kp SPACE  &mo 1              &kp LALT         &mo 2
                                                           &mkp MB1   &mkp MB2           &kp ENTER
             >;
