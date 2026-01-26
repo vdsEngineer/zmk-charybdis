@@ -1,6 +1,5 @@
 #include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
@@ -11,17 +10,203 @@
 };
 
 / {
+    behaviors {
+        new_behavior_Y: new_behavior_Y {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_Y";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&kp LESS_THAN>;
+        };
+
+        new_behavior_U: new_behavior_U {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_U";
+            #binding-cells = <0>;
+            bindings = <&kp U>, <&kp GREATER_THAN>;
+        };
+
+        new_behavior_I: new_behavior_I {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_I";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp LEFT_PARENTHESIS>;
+        };
+
+        new_behavior_O: new_behavior_O {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_O";
+            #binding-cells = <0>;
+            bindings = <&kp O>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        new_behavior_P: new_behavior_P {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_P";
+            #binding-cells = <0>;
+            bindings = <&kp P>, <&kp LEFT_BRACE>;
+        };
+
+        new_behavior_pp: new_behavior_pp {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_PP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACE>;
+        };
+
+        new_behavior_H: new_behavior_H {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_H";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&kp DOLLAR>;
+        };
+
+        new_behavior_J: new_behavior_J {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_J";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&kp UNDERSCORE>;
+        };
+
+        new_behavior_K: new_behavior_K {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_K";
+            #binding-cells = <0>;
+            bindings = <&kp K>, <&kp AMPERSAND>;
+        };
+
+        new_behavior_L: new_behavior_L {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_L";
+            #binding-cells = <0>;
+            bindings = <&kp L>, <&kp EXCLAMATION>;
+        };
+
+        new_behavior_G: new_behavior_G {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_G";
+            #binding-cells = <0>;
+            bindings = <&kp G>, <&kp PIPE>;
+        };
+
+        new_behavior_E: new_behavior_E {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_E";
+            #binding-cells = <0>;
+            bindings = <&kp E>, <&kp DOUBLE_QUOTES>;
+        };
+
+        new_behavior_W: new_behavior_W {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_W";
+            #binding-cells = <0>;
+            bindings = <&kp W>, <&kp SQT>;
+        };
+
+        new_behavior_N: new_behavior_N {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_N";
+            #binding-cells = <0>;
+            bindings = <&kp N>, <&kp PLUS>;
+        };
+
+        new_behavior_M: new_behavior_M {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_M";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp MINUS>;
+        };
+
+        new_behavior_MM: new_behavior_MM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_MM";
+            #binding-cells = <0>;
+            bindings = <&kp COMMA>, <&kp ASTERISK>;
+        };
+
+        new_behavior_MMM: new_behavior_MMM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_MMM";
+            #binding-cells = <0>;
+            bindings = <&kp PERIOD>, <&kp SLASH>;
+        };
+
+        new_behavior_MMMM: new_behavior_MMMM {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_MMMM";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>, <&kp EQUAL>;
+        };
+
+        new_behavior_LL: new_behavior_LL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_LL";
+            #binding-cells = <0>;
+            bindings = <&kp SEMICOLON>, <&kp LEFT_BRACKET>;
+        };
+
+        new_behavior_LLL: new_behavior_LLL {
+            compatible = "zmk,behavior-tap-dance";
+            label = "NEW_BEHAVIOR_LLL";
+            #binding-cells = <0>;
+            bindings = <&kp SQT>, <&kp RIGHT_BRACKET>;
+        };
+
+        swich_leng_BH: swich_leng_BH {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SWICH_LENG_BH";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&switch_leng>;
+        };
+    };
+
+    macros {
+        switch_leng: switch_leng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(SPACE)>;
+            label = "SWITCH_LENG";
+        };
+
+        next_window: next_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(DOWN))>;
+            label = "NEXT_WINDOW";
+        };
+
+        pre_window: pre_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LG(UP))>;
+            label = "PRE_WINDOW";
+        };
+
+        open_left_window: open_left_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LEFT)>;
+            label = "OPEN_LEFT_WINDOW";
+        };
+
+        open_right_window: open_right_window {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(RIGHT)>;
+            label = "OPEN_RIGHT_WINDOW";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         layer_0 {
             bindings = <
-&kp ESC         &kp N1  &kp N2  &kp N3        &kp N4     &kp N5      &kp N6     &kp N7     &kp N8     &kp N9            &kp N0    &kp BACKSPACE
-&kp TAB         &kp Q   &kp W   &kp E         &kp R      &kp T       &kp Y      &kp U      &kp I      &kp O             &kp P     &kp BSLH
-&kp LEFT_SHIFT  &kp A   &kp S   &kp D         &kp F      &kp G       &kp H      &kp J      &kp K      &kp L             &kp SEMI  &kp SQT
-&kp LCTRL       &kp Z   &kp X   &kp C         &kp V      &kp B       &kp N      &kp M      &kp COMMA  &kp LEFT_BRACKET  &kp FSLH  &kp MINUS
-                                &kp LEFT_WIN  &kp SPACE  &mo 1       &kp LALT   &kp GRAVE
-                                              &mkp MB1   &mkp MB2    &kp ENTER
+&kp ESC         &kp N1  &kp N2           &kp N3           &kp N4     &kp N5             &kp N6           &kp N7           &kp N8            &kp N9             &kp N0              &kp BACKSPACE
+&kp TAB         &kp Q   &new_behavior_W  &new_behavior_E  &kp R      &kp T              &new_behavior_Y  &new_behavior_U  &new_behavior_I   &new_behavior_O    &new_behavior_P     &new_behavior_pp
+&kp LEFT_SHIFT  &kp A   &kp S            &kp D            &kp F      &new_behavior_G    &new_behavior_H  &new_behavior_J  &new_behavior_K   &new_behavior_L    &new_behavior_LL    &new_behavior_LLL
+&kp LCTRL       &kp Z   &kp X            &kp C            &kp V      &kp B              &new_behavior_N  &new_behavior_M  &new_behavior_MM  &new_behavior_MMM  &new_behavior_MMMM  &kp PERCENT
+                                         &swich_leng_BH   &kp SPACE  &mo 1              &kp LALT         &mo 2
+                                                          &mkp MB1   &mkp MB2           &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -29,15 +214,26 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2  &kp F3  &kp F4        &kp F5     &kp F6        &kp F7     &kp F8      &kp F9      &kp F10            &kp F11  &kp F12
-&kp CAPS        &none   &none   &none         &none      &bt BT_NXT    &none      &none       &kp UP      &none              &none    &none
-&kp LEFT_SHIFT  &none   &none   &none         &none      &bt BT_CLR    &none      &kp LEFT    &kp DOWN    &kp RIGHT          &none    &none
-&kp LCTRL       &none   &none   &none         &none      &none         &none      &none       &kp PERIOD  &kp RIGHT_BRACKET  &none    &kp EQUAL
-                                &kp LEFT_WIN  &kp SPACE  &none         &kp LALT   &kp DELETE
-                                              &mkp MB1   &mkp MB2      &kp ENTER
+&kp F1          &kp F2          &kp F3             &kp F4           &kp F5        &kp F6                &kp F7         &kp F8            &kp F9     &kp F10               &kp F11                &kp F12
+&kp CAPS        &kp AT_SIGN     &kp PIPE           &kp EXCLAMATION  &kp PERCENT   &kp POUND             &kp LESS_THAN  &kp GREATER_THAN  &kp UP     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
+&kp LEFT_SHIFT  &kp LEFT_BRACE  &open_left_window  &pre_window      &next_window  &open_right_window    &kp DOLLAR     &kp LEFT          &kp DOWN   &kp RIGHT             &kp LEFT_BRACKET       &kp RIGHT_BRACKET
+&kp LCTRL       &none           &kp QUESTION       &kp DOT          &kp COMMA     &kp SEMICOLON         &kp PLUS       &kp MINUS         &kp ASTRK  &kp SLASH             &kp AMPERSAND          &kp EQUAL
+                                                   &kp LEFT_WIN     &kp SPACE     &none                 &kp LALT       &kp DELETE
+                                                                    &mkp MB1      &mkp MB2              &kp ENTER
             >;
 
             trackball-bindings = <&tsl>;
+        };
+
+        layer_2 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DELETE  &kp PRINTSCREEN  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans
+                                &trans  &trans    &trans
+            >;
         };
 
         /* layer_2 {
