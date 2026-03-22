@@ -11,13 +11,6 @@
 
 / {
     behaviors {
-        new_behavior_MMMM: new_behavior_MMMM {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_MMMM";
-            #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp EQUAL>;
-        };
-
         swich_leng_BH: swich_leng_BH {
             compatible = "zmk,behavior-tap-dance";
             label = "SWICH_LENG_BH";
@@ -32,14 +25,14 @@
             bindings = <&kp ESCAPE>, <&kp TILDE>;
         };
 
-        toggle_and_hold: toggle_and_hold {
+        space_and_hold_shift: space_and_hold_shift {
             compatible = "zmk,behavior-hold-tap";
-            label = "TOGGLE_AND_HOLD";
+            label = "SPACE_AND_HOLD_SHIFT";
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
+            quick-tap-ms = <190>;
             flavor = "balanced";
         };
 
@@ -51,6 +44,17 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             quick-tap-ms = <200>;
+            flavor = "balanced";
+        };
+
+        enter_hold_layer: enter_hold_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ENTER_HOLD_LAYER";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            quick-tap-ms = <190>;
             flavor = "balanced";
         };
     };
@@ -118,12 +122,12 @@
 
         layer_0 {
             bindings = <
-&new_behavior_esc  &kp N1  &kp N2  &kp N3                         &kp N4                             &kp N5      &kp N6     &kp N7  &kp N8     &kp N9      &kp N0         &kp BACKSPACE
-&kp TAB            &kp Q   &kp W   &kp E                          &kp R                              &kp T       &kp Y      &kp U   &kp I      &kp O       &kp P          &kp LEFT_BRACKET
-&kp LEFT_SHIFT     &kp A   &kp S   &kp D                          &kp F                              &kp G       &kp H      &kp J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&kp LCTRL          &kp Z   &kp X   &kp C                          &kp V                              &kp B       &kp N      &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RCTRL
-                                   &switch_lang_and_hold LCTRL 0  &toggle_and_hold LEFT_SHIFT SPACE  &mo 1       &kp LALT   &mo 2
-                                                                  &mkp MB1                           &mkp MB2    &kp ENTER
+&new_behavior_esc  &kp N1  &kp N2  &kp N3                         &kp N4                                  &kp N5      &kp N6                     &kp N7         &kp N8     &kp N9      &kp N0         &kp BACKSPACE
+&kp TAB            &kp Q   &kp W   &kp E                          &kp R                                   &kp T       &kp Y                      &kp U          &kp I      &kp O       &kp P          &kp LEFT_BRACKET
+&kp LEFT_SHIFT     &kp A   &kp S   &kp D                          &kp F                                   &kp G       &kp H                      &kp J          &kp K      &kp L       &kp SEMICOLON  &kp SQT
+&kp LCTRL          &kp Z   &kp X   &kp C                          &kp V                                   &kp B       &kp N                      &kp M          &kp COMMA  &kp PERIOD  &kp SLASH      &kp RCTRL
+                                   &switch_lang_and_hold LCTRL 0  &space_and_hold_shift LEFT_SHIFT SPACE  &mo 2       &kp LALT                   &kp BACKSPACE
+                                                                  &mkp MB1                                &mkp MB2    &enter_hold_layer 1 ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
@@ -131,12 +135,12 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2     &kp F3           &kp F4             &kp F5                &kp F6           &kp F7          &kp F8            &kp F9             &kp F10               &kp F11                &kp F12
-&kp CAPS        &kp GRAVE  &kp SQT          &kp DOUBLE_QUOTES  &kp NON_US_BACKSLASH  &kp PIPE         &kp AMPERSAND   &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN
-&kp LEFT_SHIFT  &none      &kp EXCLAMATION  &kp QUESTION       &kp UNDERSCORE        &none            &kp DOLLAR      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH
-&kp LCTRL       &none      &kp COMMA        &kp DOT            &kp COLON             &kp SEMICOLON    &kp PLUS        &kp MINUS         &kp ASTRK          &kp SLASH             &kp EQUAL              &kp PERCENT
-                                            &kp LEFT_WIN       &kp SPACE             &none            &php_arrow      &go_assign
-                                                               &mkp MB1              &mkp MB2         &php_fat_arrow
+&kp F1          &kp F2     &kp F3           &kp F4             &kp F5                &kp F6           &kp F7         &kp F8            &kp F9             &kp F10               &kp F11                &kp F12
+&kp CAPS        &kp GRAVE  &kp SQT          &kp DOUBLE_QUOTES  &kp NON_US_BACKSLASH  &kp PIPE         &kp AMPERSAND  &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN
+&kp LEFT_SHIFT  &none      &kp EXCLAMATION  &kp QUESTION       &kp UNDERSCORE        &none            &kp DOLLAR     &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH
+&kp LCTRL       &none      &kp COMMA        &kp DOT            &kp COLON             &kp SEMICOLON    &kp PLUS       &kp MINUS         &kp ASTRK          &kp SLASH             &kp EQUAL              &kp PERCENT
+                                            &kp LEFT_WIN       &php_fat_arrow        &php_arrow       &none          &none
+                                                               &mkp MB1              &go_assign       &none
             >;
 
             trackball-bindings = <&tsl>;
@@ -144,12 +148,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp DELETE  &kp PRINTSCREEN  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans      &trans           &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
-                                &trans  &trans    &trans
+&trans  &trans  &trans             &trans        &trans       &trans                &trans          &trans    &trans        &trans     &trans  &trans
+&trans  &trans  &trans             &trans        &trans       &trans                &trans          &kp DEL   &kp PRIOR     &trans     &trans  &trans
+&trans  &trans  &open_left_window  &next_window  &pre_window  &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans             &trans        &trans       &trans                &trans          &trans    &trans        &trans     &trans  &trans
+                                   &trans        &trans       &trans                &trans          &trans
+                                                 &trans       &trans                &trans
             >;
         };
 
