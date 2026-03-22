@@ -11,144 +11,11 @@
 
 / {
     behaviors {
-        new_behavior_Y: new_behavior_Y {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_Y";
-            #binding-cells = <0>;
-            bindings = <&kp Y>, <&kp LESS_THAN>;
-        };
-
-        new_behavior_U: new_behavior_U {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_U";
-            #binding-cells = <0>;
-            bindings = <&kp U>, <&kp GREATER_THAN>;
-        };
-
-        new_behavior_I: new_behavior_I {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_I";
-            #binding-cells = <0>;
-            bindings = <&kp I>, <&kp LEFT_PARENTHESIS>;
-        };
-
-        new_behavior_O: new_behavior_O {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_O";
-            #binding-cells = <0>;
-            bindings = <&kp O>, <&kp RIGHT_PARENTHESIS>;
-        };
-
-        new_behavior_P: new_behavior_P {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_P";
-            #binding-cells = <0>;
-            bindings = <&kp P>, <&kp LEFT_BRACE>;
-        };
-
-        new_behavior_pp: new_behavior_pp {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_PP";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACE>;
-        };
-
-        new_behavior_H: new_behavior_H {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_H";
-            #binding-cells = <0>;
-            bindings = <&kp H>, <&kp DOLLAR>;
-        };
-
-        new_behavior_J: new_behavior_J {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_J";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&kp UNDERSCORE>;
-        };
-
-        new_behavior_K: new_behavior_K {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_K";
-            #binding-cells = <0>;
-            bindings = <&kp K>, <&kp AMPERSAND>;
-        };
-
-        new_behavior_L: new_behavior_L {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_L";
-            #binding-cells = <0>;
-            bindings = <&kp L>, <&kp EXCLAMATION>;
-        };
-
-        new_behavior_G: new_behavior_G {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_G";
-            #binding-cells = <0>;
-            bindings = <&kp G>, <&kp PIPE>;
-        };
-
-        new_behavior_E: new_behavior_E {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_E";
-            #binding-cells = <0>;
-            bindings = <&kp E>, <&kp DOUBLE_QUOTES>;
-        };
-
-        new_behavior_W: new_behavior_W {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_W";
-            #binding-cells = <0>;
-            bindings = <&kp W>, <&kp SQT>;
-        };
-
-        new_behavior_N: new_behavior_N {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_N";
-            #binding-cells = <0>;
-            bindings = <&kp N>, <&kp PLUS>;
-        };
-
-        new_behavior_M: new_behavior_M {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_M";
-            #binding-cells = <0>;
-            bindings = <&kp M>, <&kp MINUS>;
-        };
-
-        new_behavior_MM: new_behavior_MM {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_MM";
-            #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp ASTERISK>;
-        };
-
-        new_behavior_MMM: new_behavior_MMM {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_MMM";
-            #binding-cells = <0>;
-            bindings = <&kp PERIOD>, <&kp SLASH>;
-        };
-
         new_behavior_MMMM: new_behavior_MMMM {
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR_MMMM";
             #binding-cells = <0>;
             bindings = <&kp SLASH>, <&kp EQUAL>;
-        };
-
-        new_behavior_LL: new_behavior_LL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_LL";
-            #binding-cells = <0>;
-            bindings = <&kp SEMICOLON>, <&kp LEFT_BRACKET>;
-        };
-
-        new_behavior_LLL: new_behavior_LLL {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_LLL";
-            #binding-cells = <0>;
-            bindings = <&kp SQT>, <&kp RIGHT_BRACKET>;
         };
 
         swich_leng_BH: swich_leng_BH {
@@ -158,43 +25,11 @@
             bindings = <&kp LGUI>, <&switch_leng>;
         };
 
-        new_behavior_F: new_behavior_F {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_F";
-            #binding-cells = <0>;
-            bindings = <&kp F>, <&kp AT_SIGN>;
-
-            tapping-term-ms = <150>;
-        };
-
-        new_behavior_D: new_behavior_D {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_D";
-            #binding-cells = <0>;
-            bindings = <&kp D>, <&kp QUESTION>;
-
-            tapping-term-ms = <150>;
-        };
-
         new_behavior_esc: new_behavior_esc {
             compatible = "zmk,behavior-tap-dance";
             label = "NEW_BEHAVIOR_ESC";
             #binding-cells = <0>;
             bindings = <&kp ESCAPE>, <&kp TILDE>;
-        };
-
-        new_behavior_s: new_behavior_s {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_S";
-            #binding-cells = <0>;
-            bindings = <&kp S>, <&kp HASH>;
-        };
-
-        new_behavior_a: new_behavior_a {
-            compatible = "zmk,behavior-tap-dance";
-            label = "NEW_BEHAVIOR_A";
-            #binding-cells = <0>;
-            bindings = <&kp A>, <&kp COLON>;
         };
 
         toggle_and_hold: toggle_and_hold {
@@ -262,12 +97,12 @@
 
         layer_0 {
             bindings = <
-&new_behavior_esc  &kp N1           &kp N2           &kp N3                         &kp N4                             &kp N5             &kp N6           &kp N7           &kp N8            &kp N9             &kp N0              &kp BACKSPACE
-&kp TAB            &kp Q            &new_behavior_W  &new_behavior_E                &kp R                              &kp T              &new_behavior_Y  &new_behavior_U  &new_behavior_I   &new_behavior_O    &new_behavior_P     &new_behavior_pp
-&kp LEFT_SHIFT     &new_behavior_a  &new_behavior_s  &new_behavior_D                &new_behavior_F                    &new_behavior_G    &new_behavior_H  &new_behavior_J  &new_behavior_K   &new_behavior_L    &new_behavior_LL    &new_behavior_LLL
-&kp LCTRL          &kp Z            &kp X            &kp C                          &kp V                              &kp B              &new_behavior_N  &new_behavior_M  &new_behavior_MM  &new_behavior_MMM  &new_behavior_MMMM  &kp PERCENT
-                                                     &switch_lang_and_hold LCTRL 0  &toggle_and_hold LEFT_SHIFT SPACE  &mo 1              &kp LALT         &mo 2
-                                                                                    &mkp MB1                           &mkp MB2           &kp ENTER
+&new_behavior_esc  &kp N1  &kp N2  &kp N3                         &kp N4                             &kp N5      &kp N6     &kp N7  &kp N8     &kp N9      &kp N0         &kp BACKSPACE
+&kp TAB            &kp Q   &kp W   &kp E                          &kp R                              &kp T       &kp Y      &kp U   &kp I      &kp O       &kp P          &kp LEFT_BRACKET
+&kp LEFT_SHIFT     &kp A   &kp S   &kp D                          &kp F                              &kp G       &kp H      &kp J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
+&kp LCTRL          &kp Z   &kp X   &kp C                          &kp V                              &kp B       &kp N      &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp PERCENT
+                                   &switch_lang_and_hold LCTRL 0  &toggle_and_hold LEFT_SHIFT SPACE  &mo 1       &kp LALT   &mo 2
+                                                                  &mkp MB1                           &mkp MB2    &kp ENTER
             >;
 
             trackball-bindings = <&tmv_coarse>;
