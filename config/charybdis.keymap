@@ -90,6 +90,27 @@
             bindings = <&kp LG(RIGHT)>;
             label = "OPEN_RIGHT_WINDOW";
         };
+
+        go_assign: go_assign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp COLON &kp EQUAL>;
+            label = "GO_ASSIGN";
+        };
+
+        php_arrow: php_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+            label = "PHP_ARROW";
+        };
+
+        php_fat_arrow: php_fat_arrow {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL &kp GREATER_THAN>;
+            label = "PHP_FAT_ARROW";
+        };
     };
 
     keymap {
@@ -100,7 +121,7 @@
 &new_behavior_esc  &kp N1  &kp N2  &kp N3                         &kp N4                             &kp N5      &kp N6     &kp N7  &kp N8     &kp N9      &kp N0         &kp BACKSPACE
 &kp TAB            &kp Q   &kp W   &kp E                          &kp R                              &kp T       &kp Y      &kp U   &kp I      &kp O       &kp P          &kp LEFT_BRACKET
 &kp LEFT_SHIFT     &kp A   &kp S   &kp D                          &kp F                              &kp G       &kp H      &kp J   &kp K      &kp L       &kp SEMICOLON  &kp SQT
-&kp LCTRL          &kp Z   &kp X   &kp C                          &kp V                              &kp B       &kp N      &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp PERCENT
+&kp LCTRL          &kp Z   &kp X   &kp C                          &kp V                              &kp B       &kp N      &kp M   &kp COMMA  &kp PERIOD  &kp SLASH      &kp RCTRL
                                    &switch_lang_and_hold LCTRL 0  &toggle_and_hold LEFT_SHIFT SPACE  &mo 1       &kp LALT   &mo 2
                                                                   &mkp MB1                           &mkp MB2    &kp ENTER
             >;
@@ -110,12 +131,12 @@
 
         layer_1 {
             bindings = <
-&kp F1          &kp F2          &kp F3             &kp F4           &kp F5        &kp F6                &kp F7         &kp F8            &kp F9     &kp F10               &kp F11                &kp F12
-&kp CAPS        &kp AT_SIGN     &kp PIPE           &kp EXCLAMATION  &kp PERCENT   &kp POUND             &kp LESS_THAN  &kp GREATER_THAN  &kp UP     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp BACKSLASH
-&kp LEFT_SHIFT  &kp LEFT_BRACE  &open_left_window  &pre_window      &next_window  &open_right_window    &kp LEFT       &kp DOWN          &kp UP     &kp RIGHT             &kp LEFT_BRACKET       &kp RIGHT_BRACKET
-&kp LCTRL       &none           &kp QUESTION       &kp DOT          &kp COMMA     &kp SEMICOLON         &kp PLUS       &kp MINUS         &kp ASTRK  &kp SLASH             &kp AMPERSAND          &kp EQUAL
-                                                   &kp LEFT_WIN     &kp SPACE     &none                 &kp LALT       &kp DELETE
-                                                                    &mkp MB1      &mkp MB2              &kp ENTER
+&kp F1          &kp F2     &kp F3           &kp F4             &kp F5                &kp F6           &kp F7          &kp F8            &kp F9             &kp F10               &kp F11                &kp F12
+&kp CAPS        &kp GRAVE  &kp SQT          &kp DOUBLE_QUOTES  &kp NON_US_BACKSLASH  &kp PIPE         &kp AMPERSAND   &kp LESS_THAN     &kp GREATER_THAN   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN
+&kp LEFT_SHIFT  &none      &kp EXCLAMATION  &kp QUESTION       &kp UNDERSCORE        &none            &kp DOLLAR      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp HASH
+&kp LCTRL       &none      &kp COMMA        &kp DOT            &kp COLON             &kp SEMICOLON    &kp PLUS        &kp MINUS         &kp ASTRK          &kp SLASH             &kp EQUAL              &kp PERCENT
+                                            &kp LEFT_WIN       &kp SPACE             &none            &php_arrow      &go_assign
+                                                               &mkp MB1              &mkp MB2         &php_fat_arrow
             >;
 
             trackball-bindings = <&tsl>;
