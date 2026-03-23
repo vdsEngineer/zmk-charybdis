@@ -159,12 +159,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans             &trans        &trans       &trans                &trans          &trans    &trans        &trans     &trans  &trans
-&trans  &trans  &trans             &trans        &trans       &trans                &trans          &kp DEL   &kp PRIOR     &trans     &trans  &trans
-&trans  &trans  &open_left_window  &next_window  &pre_window  &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &trans  &trans             &trans        &trans       &trans                &trans          &trans    &trans        &trans     &trans  &trans
-                                   &trans        &trans       &trans                &trans          &trans
-                                                 &trans       &trans                &trans
+&trans  &trans  &trans             &trans       &trans        &trans                &trans          &trans    &trans        &trans     &trans  &trans
+&trans  &trans  &trans             &trans       &trans        &trans                &trans          &kp DEL   &kp PRIOR     &trans     &trans  &trans
+&trans  &trans  &open_left_window  &pre_window  &next_window  &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &trans  &trans             &trans       &trans        &trans                &trans          &trans    &trans        &trans     &trans  &trans
+                                   &trans       &trans        &trans                &trans          &trans
+                                                &trans        &trans                &trans
             >;
         };
 
