@@ -78,14 +78,14 @@
             label = "SWITCH_LENG";
         };
 
-        next_window: next_window {
+        down_window: next_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LG(DOWN))>;
             label = "NEXT_WINDOW";
         };
 
-        pre_window: pre_window {
+        up_window: pre_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LG(UP))>;
@@ -159,12 +159,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans             &trans        &trans       &trans                &trans          &trans    &trans           &trans     &trans  &trans
-&trans  &trans  &trans             &trans        &trans       &trans                &trans          &kp DEL   &kp PRINTSCREEN  &trans     &trans  &trans
-&trans  &trans  &open_left_window  &next_window  &pre_window  &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW     &kp RIGHT  &trans  &trans
-&trans  &trans  &trans             &trans        &trans       &trans                &trans          &trans    &trans           &trans     &trans  &trans
-                                   &trans        &trans       &trans                &trans          &trans
-                                                 &trans       &trans                &trans
+&trans  &trans  &trans             &trans      &trans        &trans                &trans          &trans    &trans           &trans     &trans  &trans
+&trans  &trans  &trans             &trans      &trans        &trans                &trans          &kp DEL   &kp PRINTSCREEN  &trans     &trans  &trans
+&trans  &trans  &open_left_window  &up_window  &down_window  &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW     &kp RIGHT  &trans  &trans
+&trans  &trans  &trans             &trans      &trans        &trans                &trans          &trans    &trans           &trans     &trans  &trans
+                                   &trans      &trans        &trans                &trans          &trans
+                                               &trans        &trans                &trans
             >;
         };
 
