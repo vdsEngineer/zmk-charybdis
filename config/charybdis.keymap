@@ -74,8 +74,7 @@
         switch_leng: switch_leng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&macro_wait_time 100>, <&kp SPACE>;
-
+            bindings = <&kp LG(SPACE)>;
             label = "SWITCH_LENG";
         };
 
