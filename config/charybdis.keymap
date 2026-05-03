@@ -74,7 +74,7 @@
         switch_leng: switch_leng {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI>, <&macro_wait_time 500>, <&kp SPACE>;
+            bindings = <&kp LEFT_GUI>, <&macro_wait_time 100>, <&kp SPACE>;
 
             label = "SWITCH_LENG";
         };
@@ -160,12 +160,12 @@
 
         layer_2 {
             bindings = <
-&trans  &trans  &trans             &trans      &trans          &trans                &trans          &trans    &trans           &trans     &trans  &trans
-&trans  &trans  &trans             &trans      &trans          &trans                &trans          &kp DEL   &kp PRINTSCREEN  &trans     &trans  &trans
-&trans  &trans  &open_left_window  &up_window  &down_window    &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW     &kp RIGHT  &trans  &trans
-&trans  &trans  &trans             &trans      &swich_leng_BH  &trans                &trans          &trans    &trans           &trans     &trans  &trans
-                                   &trans      &trans          &trans                &trans          &trans
-                                               &trans          &trans                &trans
+&trans  &trans  &trans             &trans      &trans        &trans                &trans          &trans    &trans           &trans     &trans  &trans
+&trans  &trans  &trans             &trans      &trans        &trans                &trans          &kp DEL   &kp PRINTSCREEN  &trans     &trans  &trans
+&trans  &trans  &open_left_window  &up_window  &down_window  &open_right_window    &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW     &kp RIGHT  &trans  &trans
+&trans  &trans  &trans             &trans      &switch_leng  &trans                &trans          &trans    &trans           &trans     &trans  &trans
+                                   &trans      &trans        &trans                &trans          &trans
+                                               &trans        &trans                &trans
             >;
         };
 
